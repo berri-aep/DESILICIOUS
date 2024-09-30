@@ -1,0 +1,42 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.btn{
+    padding: 0.8rem 2rem;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+
+    &.bg--secondary{
+        @extend .btn;
+        background-color: $clr--secondary;
+        border-radius: 2rem;
+        color: $clr--light;
+        font-weight: 600;
+        box-shadow: rgba(231, 4, 4, 0.1) 0px 4px 12px;
+        transition: .25s ease;
+        &:hover{
+            background-color: $clr--light;
+            border: 1px solid $clr--secondary;
+            color: $clr--secondary;
+            transition: .25s ease;
+        }
+    }
+
+    &.bg--outline{
+        @extend .bg--secondary;
+        background-color: transparent;
+        border-radius: 2rem;
+        border: 1px solid $clr--secondary;
+
+    }
+
+    &.bg--radius{
+        @extend .bg--outline;
+        padding: 0.5rem 1rem;
+        border-radius: .3rem ;
+        width: fit-content;
+        color: $clr--secondary;
+        font-weight: 300;
+    }
+}
