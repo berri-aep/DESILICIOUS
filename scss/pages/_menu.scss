@@ -1,0 +1,28 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.menu{
+    &__wrapper{
+    }
+        &__card{
+        padding: 2rem 1rem;
+        text-align: center;
+        border: 2px solid transparent;
+
+        h4{
+            font-size: 2rem;
+        }
+
+        img{
+            width: 70rem;
+            border-radius: 15px;
+        }
+        &--details p{
+            color: $clr--secondary;
+        }
+        &--detail{
+        @include evenGrid(2, 1rem);
+        justify-items: center;
+        }
+    }
+}

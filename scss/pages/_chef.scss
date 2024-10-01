@@ -1,0 +1,25 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.chefs{
+    &__wrapper{
+        @include unevenGrid(25rem 25rem 25rem 25rem,2rem);
+        place-content: center;
+    }
+
+    &__card{
+        text-align: center;
+        img{
+            width: 20rem;
+            border-radius: 20px;
+        }
+        p{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        small{
+            color: $clr--secondary;
+            font-weight: 600;
+        }
+    }
+}
