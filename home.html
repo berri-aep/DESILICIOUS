@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./dist/css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <!-- HEADER -->
@@ -22,6 +23,11 @@
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
+                <div class="header--toggle__menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             </div>
         </div>
      </header>
@@ -40,7 +46,7 @@
         </div>
       </section>
       <!-- HOME MENU  -->
-       <section class="homeMenu bg--primary py--5">
+       <section class="homeMenu bg--primary py--5"">
         <div class="container">
             <div class="title">
                 <h2>Delicia Special Menu</h2>
@@ -319,7 +325,7 @@
             </div>
           </section>
 
-          <!-- FOOTER -->
+         <!-- FOOTER -->
            <footer class="footer bg--dark pt--5 pb--2">
             <div class="container">
                 <div class="footer__wrapper">
@@ -365,6 +371,11 @@
 
           <!-- SCRIPT -->
            <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+           <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+           <script>
+            AOS.init();
+            </script>
            <script src="./js/slider.js"></script>
+            <script src="./js/toggleMenu.js"></script>
 </body>
 </html>

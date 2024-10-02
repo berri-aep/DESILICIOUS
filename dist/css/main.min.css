@@ -1020,6 +1020,7 @@ fieldset,
 form,
 label,
 input,
+.contactForm__table textarea,
 .homeBooking__table textarea,
 textarea,
 legend,
@@ -1182,6 +1183,65 @@ img {
 .header__nav li a:hover {
   color: #dd1d01;
 }
+@media screen and (max-width: 520px) {
+  .header__nav {
+    position: fixed;
+    flex-direction: column;
+    top: 0;
+    text-align: center;
+    justify-content: center;
+    background-color: #20373c;
+    width: 100%;
+    height: 100vh;
+    margin-top: 21rem;
+    transform: translateY(-14rem);
+    z-index: 99;
+    right: -100%;
+    transition: all 0.5s ease;
+  }
+  .header__nav.open {
+    right: 0;
+    transition: all 0.5s ease;
+  }
+}
+.header--toggle__menu {
+  display: none;
+}
+.header--toggle__menu span {
+  background-color: #fff;
+  transition: all 0.5s ease;
+  width: 4rem;
+  height: 0.6rem;
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+}
+.header--toggle__menu.open span:first-child {
+  transform: translate(0, 20px) rotate(225deg);
+  transition: all 0.5s ease;
+}
+.header--toggle__menu.open span:nth-child(2) {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.header--toggle__menu.open span:last-child {
+  transform: translate(0, -14px) rotate(-225deg);
+  transition: all 0.5s ease;
+}
+@media screen and (max-width: 520px) {
+  .header {
+    position: fixed;
+    width: 100%;
+  }
+  .header--toggle__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .header img {
+    width: 10rem;
+  }
+}
 .header__logo {
   width: 10rem;
   height: 3rem;
@@ -1191,6 +1251,12 @@ img {
   display: flex;
   justify-content: center;
   gap: 5rem;
+}
+@media screen and (max-width: 520px) {
+  .footer__wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 .footer img {
   width: 10rem;
@@ -1232,8 +1298,20 @@ img {
   display: flex;
   gap: 2rem;
 }
+@media screen and (max-width: 520px) {
+  .footer__social {
+    justify-content: center;
+  }
+}
 .footer__social a {
   font-size: 1.3rem;
+}
+.footer__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5rem;
+  align-items: flex-start;
 }
 
 .homeBanner {
@@ -1324,7 +1402,17 @@ img {
   gap: 1rem;
   justify-items: center;
 }
+@media screen and (max-width: 520px) {
+  .homeCuisine__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
 
+@media screen and (max-width: 520px) {
+  .homeBooking {
+    padding: 2rem 0;
+  }
+}
 .homeBooking__wrapper {
   display: flex;
   justify-content: center;
@@ -1335,10 +1423,22 @@ img {
   background-size: cover;
   height: 120vh;
 }
+@media screen and (max-width: 520px) {
+  .homeBooking__wrapper {
+    background-image: none;
+    height: auto;
+  }
+}
 .homeBooking__table {
   padding: 5rem;
   width: 60rem;
   height: 45rem;
+}
+@media screen and (max-width: 520px) {
+  .homeBooking__table {
+    width: 100%;
+    padding: 0;
+  }
 }
 .homeBooking__table h4 {
   font-size: 2rem;
@@ -1402,11 +1502,21 @@ img {
   font-weight: 600;
 }
 
+@media screen and (max-width: 520px) {
+  .homeVideo {
+    padding: 2rem 0;
+  }
+}
 .homeVideo__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+@media screen and (max-width: 520px) {
+  .homeVideo__wrapper iframe {
+    height: 300px;
+  }
 }
 
 .homeBlog__wrapper {
@@ -1430,11 +1540,29 @@ img {
   font-size: 1.5rem;
   padding: 1.5rem 0;
 }
+@media screen and (max-width: 520px) {
+  .homeBlog__card--details h4 {
+    text-align: center;
+  }
+}
 
+@media screen and (max-width: 520px) {
+  .menu__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .menu__card {
   padding: 2rem 1rem;
   text-align: center;
   border: 2px solid transparent;
+}
+@media screen and (max-width: 520px) {
+  .menu__card {
+    padding: 5rem 0rem;
+    width: 30rem;
+  }
 }
 .menu__card h4 {
   font-size: 2rem;
@@ -1442,6 +1570,11 @@ img {
 .menu__card img {
   width: 70rem;
   border-radius: 15px;
+}
+@media screen and (max-width: 520px) {
+  .menu__card img {
+    width: 20rem;
+  }
 }
 .menu__card--details p {
   color: #dd1d01;
@@ -1452,12 +1585,23 @@ img {
   gap: 1rem;
   justify-items: center;
 }
+@media screen and (max-width: 520px) {
+  .menu__card--detail {
+    grid-template-columns: 25rem;
+    justify-content: center;
+  }
+}
 
 .chefs__wrapper {
   display: grid;
   grid-template-columns: 25rem 25rem 25rem 25rem;
   gap: 2rem;
   place-content: center;
+}
+@media screen and (max-width: 520px) {
+  .chefs__wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 .chefs__card {
   text-align: center;
@@ -1473,6 +1617,261 @@ img {
 .chefs__card small {
   color: #dd1d01;
   font-weight: 600;
+}
+
+.productBanner__wrapper {
+  display: grid;
+  grid-template-columns: 60rem 1fr;
+  gap: 2fr;
+  padding: 10rem 0;
+}
+@media screen and (max-width: 520px) {
+  .productBanner__wrapper {
+    display: flex;
+    grid-template-columns: 1fr;
+    flex-direction: column-reverse;
+  }
+}
+.productBanner__cards {
+  display: grid;
+  grid-template-columns: 25fr 25fr 25fr;
+  gap: 1fr;
+  gap: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .productBanner__cards {
+    grid-template-columns: 1fr;
+  }
+}
+.productBanner__cards .homeMenu__card {
+  border: 2px solid #dd1d01;
+  border-radius: 20px;
+}
+.productBanner__cards .homeMenu__card img {
+  width: 10rem;
+}
+.productBanner__cards .homeMenu__card p {
+  font-weight: 600;
+}
+.productBanner__cards .homeMenu__card a {
+  font-weight: 200;
+}
+.productBanner__search {
+  display: flex;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 20px;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+}
+.productBanner__search i {
+  color: #fff;
+}
+.productBanner__search input {
+  background-color: transparent;
+  color: #fff;
+}
+.productBanner__search input:enabled {
+  color: #fff;
+}
+.productBanner__search input::-moz-placeholder {
+  color: #fff;
+}
+.productBanner__search input::placeholder {
+  color: #fff;
+}
+@media screen and (max-width: 520px) {
+  .productBanner__search {
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+.productBanner__category--details {
+  margin-left: 5rem;
+  width: 20rem;
+  height: 30rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+}
+.productBanner__category--details th {
+  font-size: 2rem;
+  width: 15rem;
+  text-align: left;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #fff;
+  border-radius: 2px;
+}
+.productBanner__category--details tr {
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 520px) {
+  .productBanner__category--details {
+    display: flex;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+.contacts {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+.contacts__wrapper {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: start;
+}
+.contacts__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts__details--icons {
+  text-align: center;
+}
+.contacts__details--icons i {
+  font-size: 2rem;
+  color: #dd1d01;
+  padding-bottom: 1rem;
+}
+.contacts__details--icons p {
+  font-size: 1.3rem;
+  width: 20rem;
+}
+@media screen and (max-width: 520px) {
+  .contacts {
+    padding-bottom: 2rem;
+  }
+  .contacts__wrapper {
+    flex-direction: column;
+  }
+}
+
+.contactMap__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.contactMap iframe {
+  border-radius: 20px;
+  width: 60rem;
+}
+@media screen and (max-width: 520px) {
+  .contactMap {
+    display: none;
+  }
+}
+
+.contactForm__wrapper {
+  display: flex;
+  justify-content: center;
+}
+.contactForm__table {
+  padding: 5rem;
+  width: 75rem;
+  height: 45rem;
+}
+.contactForm__table p {
+  font-size: 1rem;
+}
+.contactForm__table h4 {
+  font-size: 2rem;
+}
+.contactForm__table form {
+  padding: 2rem;
+}
+.contactForm__table input, .contactForm__table textarea {
+  width: 98%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 15px;
+}
+.contactForm__table textarea {
+  height: 10rem;
+  margin-bottom: 3rem;
+}
+.contactForm__table input:focus, .contactForm__table textarea:focus, .contactForm__table input:enabled, .contactForm__table textarea:enabled {
+  color: #fff;
+}
+.contactForm__table label {
+  display: flex;
+  justify-content: start;
+  margin-left: 1rem;
+}
+.contactForm__name {
+  display: flex;
+  gap: 2rem;
+}
+.contactForm__name input, .contactForm__name .contactForm__table textarea, .contactForm__table .contactForm__name textarea {
+  width: 28.5rem;
+}
+.contactForm .contactForm__button {
+  text-align: center;
+}
+.contactForm .btn.bg--radius {
+  padding: 0.5rem 1rem;
+  background-color: #dd1d01;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+}
+.contactForm .btn.bg--radius:hover {
+  background-color: #fff;
+  color: #dd1d01;
+}
+@media screen and (max-width: 520px) {
+  .contactForm__table {
+    width: 35rem;
+  }
+  .contactForm__name {
+    gap: 1.5rem;
+  }
+  .contactForm__name input, .contactForm__name .contactForm__table textarea, .contactForm__table .contactForm__name textarea {
+    width: 9rem;
+  }
+}
+
+.blogContent {
+  padding-top: 10rem;
+}
+.blogContent__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.blogContent__card {
+  width: 50rem;
+  padding: 2rem 0;
+}
+.blogContent__card img {
+  border-radius: 35px;
+}
+.blogContent__card--details h4 {
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.blogContent__card--details p {
+  padding: 1rem 0;
+}
+@media screen and (max-width: 520px) {
+  .blogContent__card {
+    width: 25rem;
+  }
+  .blogContent__card h4 {
+    font-size: 1.5rem;
+  }
+  .blogContent__card p {
+    text-align: justify;
+    padding: 1.5rem 0;
+  }
 }
 
 .tns-outer {
@@ -1508,7 +1907,17 @@ img {
   bottom: 16rem;
   left: 6rem;
 }
+@media screen and (max-width: 520px) {
+  .prev, .next {
+    display: none;
+  }
+}
 
 .next {
   left: 108rem;
+}
+@media screen and (max-width: 520px) {
+  .next {
+    display: none;
+  }
 }/*# sourceMappingURL=main.min.css.map */

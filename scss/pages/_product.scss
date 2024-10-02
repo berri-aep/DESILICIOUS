@@ -1,0 +1,100 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.productBanner{
+    &__wrapper{
+        @include unevenGrid(60rem 1fr, 2fr);
+        padding: 10rem 0;
+
+        @include mediaQuery(520px){
+            display: flex;
+            grid-template-columns: 1fr;
+            flex-direction: column-reverse
+        }
+    }
+
+    &__cards{
+        @include unevenGrid(25fr 25fr 25fr, 1fr);
+        gap: 2rem;
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
+        .homeMenu__card{
+            border: 2px solid $clr--secondary;
+            border-radius: 20px;
+
+            img{
+                width: 10rem;
+            }
+
+            p{
+                font-weight: 600;
+            }
+
+            a{
+                font-weight: 200;
+            }
+        }
+    }
+
+    &__search{
+        display: flex;
+        width: 20rem;
+        height: 3rem;
+        border-radius: 20px;
+        justify-content: space-around;
+        align-items: center ;
+        margin-left: 5rem;
+        margin-bottom: 2rem;
+        i{
+            color: $clr--light;
+        }
+
+        input{
+            background-color: transparent;
+            color: $clr--light;
+            &:enabled{
+                color: $clr--light;
+            }
+            &::placeholder{
+                color: $clr--light;
+            }
+        }
+        @include mediaQuery(520px){
+                    display: flex;
+                    margin-left: 0;
+                    justify-content: center;
+        }
+
+    }
+    &__category{
+        
+        &--details{
+            margin-left: 5rem;
+            width: 20rem;
+            height: 30rem;
+            padding: 1rem 2rem;
+            border-radius: 20px;
+            th{
+                font-size: 2rem;
+                width: 15rem;
+                text-align: left;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid $clr--light;
+                border-radius: 2px;
+            }
+            tr{
+                font-size: 1rem;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+            }
+                @include mediaQuery(520px){
+                    display: flex;
+                    margin-left: 0;
+                    justify-content: center;
+                }
+            }
+
+        }
+    }

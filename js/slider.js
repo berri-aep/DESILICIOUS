@@ -8,5 +8,13 @@ var slider = tns({
   navPosition: "bottom",
   containerControls: "#controls",
   prevButton: ".prev",
-  nextButton: ".next"
+  nextButton: ".next",
+  responsive:{
+    1250:{
+        items: 3,
+    },
+    200:{
+        items: 1,
+    },
+  },
 });

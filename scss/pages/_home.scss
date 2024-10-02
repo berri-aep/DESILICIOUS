@@ -84,21 +84,39 @@
     &__wrapper{
         @include evenGrid(2, 1rem);
         justify-items: center;
+
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
     }
 }
 
 .homeBooking{
+    @include mediaQuery(520px){
+        padding: 2rem 0;
+    }
     &__wrapper{
         @include centerAll;
         background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(../../IMG/book\ a\ table\ bg.jpg);
         @include bgSize;
         height: 120vh;
+
+        @include mediaQuery(520px){
+            background-image: none;
+            height: auto;
+        }
     }
 
     &__table{
+        
         padding: 5rem;
         width: 60rem;
         height: 45rem;
+        @include mediaQuery(520px){
+            width: 100%;
+            padding: 0;
+        }
+
         h4{
             font-size: 2rem;
         }
@@ -167,9 +185,16 @@
 }
 
 .homeVideo{
+    @include mediaQuery(520px){
+        padding: 2rem 0;
+    }
     &__wrapper{
         @include centerAll;
-        
+        iframe{
+            @include mediaQuery (520px){
+                height: 300px;
+            }
+        }
     }
 }
 
@@ -193,6 +218,10 @@
         &--details h4{
             font-size: 1.5rem;
             padding: 1.5rem 0;
+
+            @include mediaQuery(520px){
+                text-align: center;
+            }
         }
     }
 

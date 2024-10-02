@@ -2,12 +2,22 @@
 @use "../base/" as *;
 
 .menu{
-    &__wrapper{
-    }
+        &__wrapper{
+            @include mediaQuery(520px){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
         &__card{
         padding: 2rem 1rem;
         text-align: center;
         border: 2px solid transparent;
+            @include mediaQuery(520px){
+            
+            padding: 5rem 0rem;
+            width: 30rem;
+        }
 
         h4{
             font-size: 2rem;
@@ -16,6 +26,11 @@
         img{
             width: 70rem;
             border-radius: 15px;
+
+            @include mediaQuery(520px){
+                width: 20rem;
+                
+            }
         }
         &--details p{
             color: $clr--secondary;
@@ -23,6 +38,14 @@
         &--detail{
         @include evenGrid(2, 1rem);
         justify-items: center;
+
+            @include mediaQuery(520px){
+            grid-template-columns: 25rem;
+            justify-content: center;
+            
+            }
         }
+
+
     }
 }

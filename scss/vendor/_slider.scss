@@ -34,9 +34,16 @@
     position: relative;
     bottom: 16rem;
     left: 6rem;
+
+    @include mediaQuery(520px){
+        display: none;
+    }
 }
 
 .next{
     @extend .prev;
     left: 108rem;
+    @include mediaQuery(520px){
+        display: none;
+    }
 }

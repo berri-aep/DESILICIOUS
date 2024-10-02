@@ -1,0 +1,140 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contacts{
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    &__wrapper{
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+        align-items: start;
+    }
+    &__details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--icons{
+             text-align: center;
+            i{
+            font-size: 2rem;
+            color: $clr--secondary;
+            padding-bottom: 1rem;
+            
+        }
+        p{
+            font-size: 1.3rem;
+            width: 20rem;
+        }
+        }
+    }
+
+    @include mediaQuery (520px){
+        padding-bottom: 2rem;
+        &__wrapper{
+            flex-direction: column;
+        }
+        
+    }
+
+}
+
+.contactMap{
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    iframe{
+        border-radius: 20px;
+        width: 60rem;
+    }
+
+    @include mediaQuery(520px){
+        display: none;
+    }
+}
+
+.contactForm{
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+    }
+    &__table{
+        padding: 5rem;
+        width: 75rem;
+        height: 45rem;
+        p{
+            font-size: 1rem;
+        }
+
+        h4{
+            font-size: 2rem;
+        }
+
+        form{
+            padding: 2rem;
+        }
+        input{
+            width: 98%;
+            margin: .5rem;
+            padding: 0.5rem;
+            background-color: transparent;
+            border: 1px solid $clr--light;
+            border-radius: 15px;
+        }
+        textarea{
+            @extend input;
+            height: 10rem;
+            margin-bottom: 3rem;
+        }
+        input:focus, input:enabled{
+            color: $clr--light;
+        }
+        label{
+        display: flex;
+        justify-content: start;
+        margin-left: 1rem;
+        }
+
+    }
+    &__name{
+        display: flex;
+            gap: 2rem;
+            
+            input{
+                width: 28.5rem;
+            }  
+
+    }
+
+    .contactForm__button{
+        text-align: center;
+    }
+    
+    .btn{
+        &.bg--radius{
+            padding: .5rem 1rem;
+            background-color: $clr--secondary;
+            color: $clr--light;
+            border-radius: 50px;
+            font-weight: 600;
+            &:hover{
+                background-color: $clr--light;
+                color: $clr--secondary;
+            }
+        }
+    }
+
+    @include mediaQuery(520px){
+        &__table{
+            width: 35rem;
+        }
+        &__name{
+            gap: 1.5rem;
+            input{
+             width: 9rem;   
+            }
+            
+        }
+    }
+}

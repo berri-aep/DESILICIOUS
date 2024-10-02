@@ -5,6 +5,10 @@
     &__wrapper{
         @include unevenGrid(25rem 25rem 25rem 25rem,2rem);
         place-content: center;
+
+        @include mediaQuery(520px){
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card{
@@ -21,5 +25,7 @@
             color: $clr--secondary;
             font-weight: 600;
         }
+
+       
     }
 }
