@@ -8,6 +8,7 @@
 
         @include mediaQuery(520px){
             display: flex;
+            align-items: center;
             grid-template-columns: 1fr;
             flex-direction: column-reverse
         }
@@ -18,6 +19,7 @@
         gap: 2rem;
         @include mediaQuery(520px){
             grid-template-columns: 1fr;
+            padding: 2rem 0;
         }
         .homeMenu__card{
             border: 2px solid $clr--secondary;

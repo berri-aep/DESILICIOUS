@@ -1628,6 +1628,7 @@ img {
 @media screen and (max-width: 520px) {
   .productBanner__wrapper {
     display: flex;
+    align-items: center;
     grid-template-columns: 1fr;
     flex-direction: column-reverse;
   }
@@ -1641,6 +1642,7 @@ img {
 @media screen and (max-width: 520px) {
   .productBanner__cards {
     grid-template-columns: 1fr;
+    padding: 2rem 0;
   }
 }
 .productBanner__cards .homeMenu__card {
