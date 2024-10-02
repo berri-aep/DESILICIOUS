@@ -20,6 +20,7 @@
         @include mediaQuery(520px){
             grid-template-columns: 1fr;
             padding: 2rem 0;
+            width: 20rem;
         }
         .homeMenu__card{
             border: 2px solid $clr--secondary;

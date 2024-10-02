@@ -1643,6 +1643,7 @@ img {
   .productBanner__cards {
     grid-template-columns: 1fr;
     padding: 2rem 0;
+    width: 20rem;
   }
 }
 .productBanner__cards .homeMenu__card {
